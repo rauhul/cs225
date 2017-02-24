@@ -1,0 +1,37 @@
+Grading r13130 by rvarma2 committed on Sat Feb 13 18:42:16 CST 2016
+Monad Autograder
+Testing lab_gdb at 2016-02-22 00:24:14
+
+"Fish are meat, they're like water poultry." ~ Chase Geigle
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+testInsertFront  . . . . . . . [5 pts]  - passed
+testInsertBack . . . . . . . . [15 pts] - passed
+testDestructor10 (asan)  . . . [10 pts] - passed
+testDestructor37 (asan)  . . . [10 pts] - passed
+testReverse20_size . . . . . . [3 pts]  - passed
+testReverse20  . . . . . . . . [5 pts]  - passed
+testReverse37_size . . . . . . [3 pts]  - passed
+testReverse37  . . . . . . . . [5 pts]  - passed
+testReverse_memory (asan)  . . [4 pts]  - passed
+testReverseEmpty_memory (asan) [5 pts]  - passed
+testReverse20_memory (asan)  . [5 pts]  - passed
+testShuffle20_size . . . . . . [5 pts]  - passed
+testShuffle20  . . . . . . . . [4 pts]  - passed
+testShuffle37_size . . . . . . [5 pts]  - passed
+testShuffle37  . . . . . . . . [4 pts]  - passed
+testShuffle_memory (asan)  . . [4 pts]  - passed
+testShuffleEmpty_memory (asan) [3 pts]  - passed
+testShuffle20_memory (asan)  . [5 pts]  - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+

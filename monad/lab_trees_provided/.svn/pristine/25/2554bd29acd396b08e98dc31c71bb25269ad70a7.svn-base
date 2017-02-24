@@ -1,0 +1,11 @@
+[Required Files]
+binarytree.h
+binarytree.cpp
+
+[Testing Files]
+Makefile
+unit_tests.cpp
+binarytree_given.cpp
+
+[Libraries]
+printtree

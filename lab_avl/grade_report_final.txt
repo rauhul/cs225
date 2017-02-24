@@ -1,0 +1,28 @@
+Grading r36486 by rvarma2 committed on Sun Apr 10 16:22:27 CDT 2016
+Monad Autograder
+Testing lab_avl at 2016-04-11 00:20:50
+
+"You look at their elbows, they actually have many good theoretical elbows." ~ Prof. Jiawei Han
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+test_oneElement  . . . [8 pts]  - passed
+test_simpleRotateLeft  [8 pts]  - passed
+test_simpleRotateRight [8 pts]  - passed
+test_threeLeftRotates  [8 pts]  - passed
+test_threeRightRotates [8 pts]  - passed
+test_manyRotations . . [17 pts] - passed
+test_manyInserts . . . [17 pts] - passed
+test_manyRemovals  . . [17 pts] - passed
+test_valgrind (asan) . [9 pts]  - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+

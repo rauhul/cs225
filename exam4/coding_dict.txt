@@ -1,0 +1,68 @@
+#########################################
+##                                     ##
+##     Grading question exam4-dict     ##
+##                                     ##
+#########################################
+:: Compiling...
+g++ -std=c++0x -c -g -O0 -Wall -Wextra -Wno-unused-function   -c -o dict.o dict.cpp
+:: Compiled successfully!
+:: Compiling provided code...
+
+:: Compiling test_duplicate.
+:: Running test_duplicate.
+Finding a pair which has a sum-of-squares of 50
+in [1, 2, 3, 5, 3, 5]
+Result:   {5, 5}
+Expected: {5, 5}
+:: Passed test_duplicate.
+
+:: Compiling test_multipair.
+:: Running test_multipair.
+Finding a pair which has a sum-of-squares of 65
+in [1, 4, 7, 8, 5, 6, 9, 10]
+Result:   {1, 8}
+Expected: one of [{1, 8}, {4, 7}, {7, 4}, {8, 1}]
+:: Passed test_multipair.
+
+:: Compiling test_multipair_duplicate.
+:: Running test_multipair_duplicate.
+Finding a pair which has a sum-of-squares of 65
+in [1, 4, 8, 7, 1, 4, 7, 8, 5, 6, 9, 10]
+Result:   {1, 8}
+Expected: one of [{1, 8}, {4, 7}, {7, 4}, {8, 1}]
+:: Passed test_multipair_duplicate.
+
+:: Compiling test_multiple_duplicate.
+:: Running test_multiple_duplicate.
+Finding a pair which has a sum-of-squares of 2
+in [1, 1, 1, 1, 1]
+Result:   {1, 1}
+Expected: {1, 1}
+:: Passed test_multiple_duplicate.
+
+:: Compiling test_nopair.
+:: Running test_nopair.
+Finding a pair which has a sum-of-squares of 4
+in [1, 2, 3]
+Result:   {0, 0}
+Expected: {0, 0}
+:: Passed test_nopair.
+
+:: Compiling test_onepair.
+:: Running test_onepair.
+Finding a pair which has a sum-of-squares of 25
+in [1, 2, 3, 4, 5]
+Result:   {3, 4}
+Expected: one of [{3, 4}, {4, 3}]
+:: Passed test_onepair.
+
+:: Compiling test_onepair_duplicate.
+:: Running test_onepair_duplicate.
+Finding a pair which has a sum-of-squares of 8
+in [2, 3, 2, 1]
+Result:   {2, 2}
+Expected: {2, 2}
+:: Passed test_onepair_duplicate.
+
+Grade for question exam4-dict: 100/100
+

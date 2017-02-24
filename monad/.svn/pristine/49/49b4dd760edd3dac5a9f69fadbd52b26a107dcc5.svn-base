@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+# get the monad directory
+# source:
+# http://stackoverflow.com/questions/59895/can-a-bash-script-tell-what-directory-its-stored-in
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ] ; do
+	LAST_SOURCE="$SOURCE";
+	SOURCE="$(readlink "$SOURCE")";
+	if [ "${SOURCE:0:1}" != / ] ; then
+		SOURCE="$(dirname "$LAST_SOURCE")/$SOURCE";
+	fi;
+done
+MONAD_DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+SOURCE_DIR="$MONAD_DIR/source"
+CALLING_DIR=`pwd`
+
+# allow explicit user/pass for non-interactive usage
+SVN_OPTS=()
+if [ ! -z "$MONAD_SVN_USERNAME" ]; then
+	SVN_OPTS+=('--username' "$MONAD_SVN_USERNAME")
+fi
+if [ ! -z "$MONAD_SVN_PASSWORD" ]; then
+	SVN_OPTS+=('--password' "$MONAD_SVN_PASSWORD")
+fi
+
+svn cleanup "$MONAD_DIR"
+svn revert "$MONAD_DIR/.monadid" -q
+svn up "$MONAD_DIR" -q --accept theirs-full "${SVN_OPTS[@]}"
+make -C "$SOURCE_DIR" -q
+if [ "$?" -ne 0 ]; then
+	if ! make -C "$SOURCE_DIR" --quiet; then
+		# compilation failed
+		echo "error: failed to compile monad from source"
+		exit 1
+	fi
+fi
+"$SOURCE_DIR/pure-monad" $@

@@ -1,0 +1,29 @@
+TOTAL GRADE: 100.00/100.00
+             = 60*mc/8 + 40*code/10
+          where   mc = min(8,  10.00) = 8.00
+                code = min(10, 16.00) = 10.00
+
+Coding problems:
+(if you didn't submit anything, you won't get a report)
+
+9.00 /10.00  Dining Hall 1b
+===========================
+ 3.00/3.00   Give Any Meal
+  :: -0.00  Correct
+ 1.50/2.00   Give Bacon Meal
+  :: -0.50  Incorrect retrieval of item from data structure
+ 2.00/2.00   Give Veggie Meal
+  :: -0.00  Correct
+ 1.50/2.00   Add Meal
+  :: -0.50  done_cooking() not called/incorrectly called
+ 1.00/1.00   Data Structures for Veggie and Bacon Meals
+  :: -0.00  Correct
+Score: 9.00/10.00
+
+7.00 /10.00  Games Night 02
+===========================
+ 7.00/10.00  Reorganize List
+  :: +7.00  Code contains one major error
+  Comments: prev = iter, iter is at end of list.
+Score: 7.00/10.00
+

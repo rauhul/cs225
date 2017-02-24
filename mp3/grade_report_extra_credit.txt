@@ -1,0 +1,51 @@
+Grading r16158 by rvarma2 committed on Fri Feb 19 21:55:15 CST 2016
+Monad Autograder
+Testing mp3.1 at 2016-02-20 00:28:12
+
+"I did respond to your email, but I might have forgotten to hit send." ~ Cinda Heeren
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+testInsertFront  . . . . . . . . [2 pts] - passed
+testInsertBack . . . . . . . . . [2 pts] - passed
+testDestructor10 (asan)  . . . . [5 pts] - passed
+testDestructor37 (asan)  . . . . [5 pts] - passed
+testReverse20_size . . . . . . . [1 pts] - passed
+testReverse20_forward  . . . . . [3 pts] - passed
+testReverse20_backward . . . . . [4 pts] - passed
+testReverse37_size . . . . . . . [1 pts] - passed
+testReverse37_forward  . . . . . [2 pts] - passed
+testReverse37_backward . . . . . [2 pts] - passed
+testReverseEmpty (asan)  . . . . [5 pts] - passed
+testReverse20_memory (asan)  . . [3 pts] - passed
+testReverseNth20_2_size  . . . . [1 pts] - passed
+testReverseNth20_2_forward . . . [3 pts] - passed
+testReverseNth20_2_backward  . . [4 pts] - passed
+testReverseNth37_4_size  . . . . [1 pts] - passed
+testReverseNth37_4_forward . . . [5 pts] - passed
+testReverseNth37_4_backward  . . [6 pts] - passed
+testReverseNth37_37  . . . . . . [3 pts] - passed
+testReverseNth37_4_memory (asan) [3 pts] - passed
+testReverseNthEmpty (asan) . . . [5 pts] - passed
+testWaterfall4_size  . . . . . . [1 pts] - passed
+testWaterfall4_forward . . . . . [3 pts] - passed
+testWaterfall4_backward  . . . . [4 pts] - passed
+testWaterfall7_size  . . . . . . [1 pts] - passed
+testWaterfall7_forward . . . . . [3 pts] - passed
+testWaterfall7_backward  . . . . [4 pts] - passed
+testWaterfall12_size . . . . . . [1 pts] - passed
+testWaterfall12_forward  . . . . [3 pts] - passed
+testWaterfall12_backward . . . . [4 pts] - passed
+testWaterfall7_memory (asan) . . [5 pts] - passed
+testWaterfall7_empty (asan)  . . [5 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+

@@ -1,0 +1,94 @@
+Grading r43553 by tolar2 committed on Wed Apr 27 18:19:57 CDT 2016
+Monad Autograder
+Testing lab_graphs at 2016-05-02 00:21:38
+
+"Procrastination: working tomorrow for a better today." ~ Anonymous
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+minWeight_OneEdge_ReturnValue . [10 pts] - FAILED: unit_tests.cpp:17: Assertion (minWeight == 69) failed
+minWeight_OneEdge_EdgeLabel . . [10 pts] - FAILED: unit_tests.cpp:27: Assertion (graph.getEdgeLabel(0, 5) == "MIN") failed
+minWeight_MultiEdge_ReturnValue [10 pts] - FAILED: unit_tests.cpp:38: Assertion (minWeight == 34) failed
+minWeight_MultiEdge_EdgeLabels  [15 pts] - passed
+minPath_OneEdge_ReturnValue . . [10 pts] - FAILED: unit_tests.cpp:61: Assertion (GraphTools::findShortestPath(graph, 0, 1) == 1) failed
+minPath_OneEdge_EdgeLabel . . . [10 pts] - FAILED: unit_tests.cpp:71: Assertion (graph.getEdgeLabel(0, 1) == "MINPATH") failed
+minPath_MultiEdge_ReturnValue . [10 pts] - FAILED: unit_tests.cpp:82: Assertion (GraphTools::findShortestPath(graph, 6, 4) == 4) failed
+minPath_MultiEdge_EdgeLabels  . [10 pts] - FAILED: unit_tests.cpp:104: Assertion (edge->label == "MINPATH") failed
+kruskal_all . . . . . . . . . . [15 pts] - FAILED: unit_tests.cpp:137: did not label "MST" on minimum spanning tree edge
+
+
+Total score...
+================================================================
+TOTAL SCORE: 15
+
+
+
+Detailed test output...
+================================================================
+----------------------------------------------------------------
+minWeight_OneEdge_ReturnValue [10 points]
+Result: FAILED: unit_tests.cpp:17: Assertion (minWeight == 69) failed
+Took 0ms (1000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+minWeight_OneEdge_EdgeLabel [10 points]
+Result: FAILED: unit_tests.cpp:27: Assertion (graph.getEdgeLabel(0, 5) == "MIN") failed
+Took 0ms (1000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+minWeight_MultiEdge_ReturnValue [10 points]
+Result: FAILED: unit_tests.cpp:38: Assertion (minWeight == 34) failed
+Took 0ms (1000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+minPath_OneEdge_ReturnValue [10 points]
+Result: FAILED: unit_tests.cpp:61: Assertion (GraphTools::findShortestPath(graph, 0, 1) == 1) failed
+Took 0ms (1000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+minPath_OneEdge_EdgeLabel [10 points]
+Result: FAILED: unit_tests.cpp:71: Assertion (graph.getEdgeLabel(0, 1) == "MINPATH") failed
+Took 0ms (1000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+minPath_MultiEdge_ReturnValue [10 points]
+Result: FAILED: unit_tests.cpp:82: Assertion (GraphTools::findShortestPath(graph, 6, 4) == 4) failed
+Took 0ms (1000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+minPath_MultiEdge_EdgeLabels [10 points]
+Result: FAILED: unit_tests.cpp:104: Assertion (edge->label == "MINPATH") failed
+Took 0ms (1000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+kruskal_all [15 points]
+Result: FAILED: unit_tests.cpp:137: did not label "MST" on minimum spanning tree edge
+Took 0ms (1000ms timeout)
+Output:
+----------------------------------------------------------------
+
+
+----------------------------------------------------------------
+Total score...
+================================================================
+TOTAL SCORE: 15
+

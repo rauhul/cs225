@@ -1,0 +1,93 @@
+ x Complete
+ v Untested
+ d Deleted
+ p Probably already done
+
+Security Critical
+---------------------
+ x prevent student headers from screwing with proxy's preprocessor macros
+   x probably needs no header inclusion guards and be included at the bottom of every include list
+     x changed to randimized header
+   x change mp_part.h so it can be used before proxy.h
+ x allow monad to take a relative path ../sp12-cs225/toole1/mp2.1
+ x make an exec function that outputs to a string instead of an fd
+   I think students may be able to declare their own test cases and get points for them... :o
+      I think we can fix this by having proxy.h check the __FILE__ pseudo-macro, but I should check
+         this is viable. Ideally it could be a runtime check that checks whether the file was on the
+         list of testing files rather than required files.
+   cc-monad pass-through for working compilation (so it works from student makefiles)
+
+Critical
+---------------------
+   avoid wasted compilation - Simon
+      SSH for security
+      /dev/shm
+   better output
+     personification
+     quotes of the day
+ x   man isatty - colors when terminal
+     better output on student idiocy
+        if compilation fails
+   STYLE
+   Directory structure for config.ini includes
+   encrypt/secure pipe transfers
+   remove all system() calls
+      fix make system() call in monad.cpp - need some varargs or something
+      replace ln -s util/* system() calls
+ x how to release it to students
+   Fix weirdness on SVN no password stored issues...
+   wan8 mp2 stall under monad but not proxy
+   Remove [Testing Files] header, simply copy all files into dir
+ x Remove PASS; statement, use exceptions instead of returns
+ x Switch to new OptionParser
+    x share OptionParser code with proxy
+   Start of monad output
+      Say mp5.1 instead of mp5 for extra credit
+      list command line arguments turned on *somewhere* (in brief format, for posterity)
+   define MP_PART=0,1,2 for make in monad.cpp
+ x use namespaces to avoid test name collisions
+     resolve namespace use to output checks as well instead of prefix stuff
+   partial compilation
+     split files with csplit -k -s -f part.cpp. unit_tests.cpp '/^#pragma monad split/' '{100}' >& /dev/null
+     compile with -$(COMPILER) so it doesn't error on exit
+     use $(wildcard $(<.o files>)) to get only the .o files that compiled
+     ????
+     profit!
+   sort test cases to fix partial compilation issues
+   update (out of) message to be 100 always, except when --provided, in which case it does nothing
+   fix relative directory specifications to work when not inside the monad folder to begin with
+   check that valgrind output doesn't happen if FAIL happens first
+   replace namespacing with static (file-level functions), which i think can still have function pointers, but
+      would make printed output nicer
+
+Moderately important
+---------------------
+ x display time the autograder was run so students don't get confused about when
+      their output is from (due to nightly autograder runs)
+   fix sigalarm security hole
+   optimization
+   mp1_newtests and lab02_newtests currently have 2 different ways of compiling 2 programs. this should be unified
+   more elegant way of handling mp4's Makefile.1 for part 1 in config.ini
+      possibly have the MP part number be defined when calling make and handle it internally.
+   weird valgrind failure messages
+      these are prob. from output being cut off in set_max in pipestream
+ p What does "Segmentation Fault: 11" mean? - 11 is the signal number, possibly just a different sigstr implementation
+   move all source and binaries to new folder
+   make cache/ folder
+   monad clean probably doesn't work
+    - should also have it do a make clean from the bash script
+
+Doesn't really matter
+---------------------
+   fix unknown times, maybe only output timeout
+   remove additional output under valgrind
+   readFile() bug where lines have ':' or '?' in them?!
+      long term style solution
+   valgrind.h and memcheck.h should be reverted to their original states (Red->red)
+
+Noticed test failures
+---------------------
+   MP4 timing
+   MP5 timing
+   Lab04 unknown test(s) (20 points)
+

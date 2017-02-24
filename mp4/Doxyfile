@@ -1,0 +1,4 @@
+@INCLUDE        = ../doxygen/doxygen.conf
+PROJECT_NAME    = "MP4"
+PROJECT_BRIEF   = "Stacks and Queues"
+EXTRACT_PRIVATE = YES

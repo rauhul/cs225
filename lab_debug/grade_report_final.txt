@@ -1,0 +1,24 @@
+Grading r6673 by rvarma2 committed on Sun Jan 31 21:20:16 CST 2016
+Monad Autograder
+Testing lab_debug at 2016-02-01 00:22:14
+
+"Any sufficiently advanced bug is indistinguishable from a feature." ~ Rich Kulawiec
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+no_segfaults . . . [20 pts] - passed
+produces_out_png . [10 pts] - passed
+similar_sketch . . [30 pts] - passed
+complete_in_01_png [20 pts] - passed
+complete_in_02_png [20 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+

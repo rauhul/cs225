@@ -1,0 +1,15 @@
+Eigen
+Eigen/src
+Eigen/src/Jacobi
+Eigen/src/Householder
+Eigen/src/Core
+Eigen/src/Core/util
+Eigen/src/Core/products
+Eigen/src/Core/arch
+Eigen/src/Core/arch/SSE
+Eigen/src/Core/arch/Default
+Eigen/src/Cholesky
+Eigen/src/misc
+Eigen/src/plugins
+Eigen/src/SVD
+Eigen/src/QR

@@ -1,0 +1,72 @@
+Grading r31107 by rvarma2 committed on Mon Mar 28 22:12:43 CDT 2016
+Monad Autograder
+Testing lab_dict at 2016-03-29 00:22:41
+
+"I love deadlines. I like the whooshing sound they make as they fly by." ~ Douglas Adams
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+test_get_anagrams  . . . . [15 pts] - FAILED: unit_tests.cpp:38: Assertion (canon == result) failed
+test_get_all_anagrams  . . [15 pts] - FAILED: unit_tests.cpp:57: Assertion (canon == result_set) failed
+test_fib . . . . . . . . . [5 pts]  - passed
+test_memoized_fib  . . . . [15 pts] - passed
+test_homophones  . . . . . [10 pts] - FAILED: unit_tests.cpp:86: Assertion ((! d.homophones("scent", "DOG"))) failed
+test_cartalk_puzzle  . . . [10 pts] - FAILED: unit_tests.cpp:97: Assertion (result.size() == 1) failed
+test_get_common_words_3  . [15 pts] - passed
+test_get_common_words_3000 [15 pts] - FAILED: Timed out (1000ms)
+
+
+Total score...
+================================================================
+TOTAL SCORE: 35
+
+
+
+Detailed test output...
+================================================================
+----------------------------------------------------------------
+test_get_anagrams [15 points]
+Result: FAILED: unit_tests.cpp:38: Assertion (canon == result) failed
+Took 0ms (5000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+test_get_all_anagrams [15 points]
+Result: FAILED: unit_tests.cpp:57: Assertion (canon == result_set) failed
+Took 0ms (5000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+test_homophones [10 points]
+Result: FAILED: unit_tests.cpp:86: Assertion ((! d.homophones("scent", "DOG"))) failed
+Took 0ms (1000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+test_cartalk_puzzle [10 points]
+Result: FAILED: unit_tests.cpp:97: Assertion (result.size() == 1) failed
+Took 0ms (1000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+test_get_common_words_3000 [15 points]
+Result: FAILED: Timed out (1000ms)
+Took 1000ms (1000ms timeout)
+Output:
+----------------------------------------------------------------
+
+
+----------------------------------------------------------------
+Total score...
+================================================================
+TOTAL SCORE: 35
+

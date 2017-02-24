@@ -1,0 +1,27 @@
+Grading r17598 by rvarma2 committed on Sun Feb 21 23:45:37 CST 2016
+Monad Autograder
+Testing lab_inheritance at 2016-02-22 01:18:39
+
+"It's like comparing a small apple with a medium-sized apple." ~ Jason Cho
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+test_virtual_perim  . . . . . . [10 pts] - passed
+test_virtual_area . . . . . . . [10 pts] - passed
+test_destructor (asan)  . . . . [20 pts] - passed
+test_constructor  . . . . . . . [10 pts] - passed
+test_drawable_destructor (asan) [10 pts] - passed
+test_truck_draw . . . . . . . . [10 pts] - passed
+test_slicing  . . . . . . . . . [20 pts] - passed
+test_flower_destructor (asan) . [10 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+

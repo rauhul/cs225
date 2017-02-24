@@ -1,0 +1,69 @@
+# Only define the compiler if it hasn't been defined already (i.e. a test's
+# Makefile has already specified it).
+CXX ?= g++
+TESTEXE := proxy
+# This order is necessary for security. Always include student code last!
+# TODO (toole1): I wish I knew why this was; doing unit_tests first is slow if the student code doesn't compile
+TESTOBJS := $(TESTEXE).o util.o unit_tests.o monad_shared.o $(TESTOBJS)
+
+ifndef ALL_TARGET
+ALL_TARGET = all
+all: $(TESTEXE)
+endif
+
+ifndef LDFLAGS
+LDFLAGS :=
+endif
+
+# Using temp instead of /dev/null to work on cygwin
+IS_LIBRT:=$(shell echo "int main(){}" | g++ -o temp -x c++ - -lrt &>/dev/null ; echo $$? ; rm -f temp)
+IS_LIBPNG:=$(shell echo "int main(){}" | g++ -o temp -x c++ - -lpng &>/dev/null ; echo $$? ; rm -f temp)
+ifeq ($(IS_LIBRT),0)
+LDFLAGS += -lrt
+endif
+ifeq ($(IS_LIBPNG),0)
+LDFLAGS += -lpng
+endif
+
+.PHONY: all
+
+all: $(TESTEXE) $(TESTEXE)-asan
+
+$(TESTEXE): $(TESTOBJS)
+	$(CXX) $(TESTOBJS) $(LDFLAGS) -o $@
+
+$(TESTEXE)-asan: $(TESTOBJS:.o=-asan.o)
+	$(CXX) $(TESTOBJS:.o=-asan.o) $(LDFLAGS) -fsanitize=address -o $@
+
+unit_tests.o : unit_tests.cpp $(wildcard *.h)
+	../source/cc-monad $(CXX) $(CXXFLAGS) -c $(@:.o=.cpp) -o $@
+
+unit_tests-asan.o : unit_tests.cpp $(wildcard *.h)
+	../source/cc-monad $(CXX) $(CXXFLAGS) -fsanitize=address -c unit_tests.cpp -o $@
+
+# Special case for when we include Eigen---it unfortunately generates lots of
+# shadow warnings, so we compile it separately and exclude -Wshadow
+$(TESTEXE)_fit_curve.o : $(TESTEXE)_fit_curve.cpp $(wildcard *.h) $(wildcard Eigen/*)
+	$(CXX) $(CXXFLAGS) -c $(@:.o=.cpp) -o $@
+
+%.o : %.cpp $(wildcard *.h) $(wildcard *.tcc)
+	$(CXX) $(CXXFLAGS) -c $(@:.o=.cpp) -o $@
+
+# Needed for include/ src/ split
+%.o : src/%.cpp $(wildcard include/*.h) $(wildcard include/*.tcc)
+	$(CXX) $(CXXFLAGS) -c src/$(@:.o=.cpp) -o $@
+
+# Needed for ASAN
+%-asan.o : %.cpp $(wildcard *.h) $(wildcard *.tcc)
+	$(CXX) $(CXXFLAGS) -fsanitize=address -c $(@:-asan.o=.cpp) -o $@
+
+# Needed for ASAN and include/ src/ split
+%-asan.o : src/%.cpp $(wildcard include/*.h) $(wildcard include/*.tcc)
+	$(CXX) $(CXXFLAGS) -fsanitize=address -c src/$(@:-asan.o=.cpp) -o $@
+
+ifndef CLEAN_TARGET
+CLEAN_TARGET = clean
+.PHONY: clean
+clean:
+	-rm -f *.o $(TESTEXE) $(TESTEXE)-asan
+endif

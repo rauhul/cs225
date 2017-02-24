@@ -1,0 +1,331 @@
+\documentclass[11pt]{article}
+\usepackage{jeffe,handout}
+%\def\rmdefault{bch} % Use Charter for main text font.
+
+\def\BOX#1{\fbox{\vbox to #1{\vss\hbox to #1{\hss}}}}
+\def\Bigbox{\BOX{0.25in}}
+\def\Bigbox{\raisebox{-0.5ex}[0.25in][0pt]{\BOX{0.25in}}}
+
+\hidesolutions
+
+\renewcommand{\arraystretch}{2}
+
+% =========================================================
+\begin{document}
+
+\headers{CS 225}{ }{Spring 2016}
+
+\begin{center}
+    \LARGE
+    \textbf{Homework 0}
+    \\[1ex]
+    \Large Due January 25, 2016 \\
+    in lecture and SVN \\
+    \large Instructions for submission into your \\
+    class SVN repository are on the webpage.
+\end{center}
+
+\bigskip\hrule
+\begin{quote}
+    The purpose of this assignment is to give you a chance to refresh the math
+    skills we expect you to have learned in prior classes. These particular
+    skills will be essential to mastery of CS225, and we are unlikely to take
+    much class time reminding you how to solve similar problems. Though you are
+    not required to work independently on this assignment, we encourage you to
+    do so because we think it may help you diagnose and remedy some things you
+    might otherwise find difficult later on in the course. If this homework is
+    difficult, please consider completing the discrete math requirement (CS173
+    or MATH 213) before taking CS225.
+
+    \bigskip
+    \hrule
+\end{quote}
+
+\begin{table}[h]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{ll}
+        \textbf{Name}: & \\
+        \textbf{NetID}: & \\
+        \textbf{Section} (circle one):
+        & \parbox[t]{4.5in}{
+            \begin{tabular}[t]{llll}
+                Wednesday & 7--9pm  AYB &             &            \\ \hline
+                Thursday  & 9--11am AYC & 11--1pm AYD & 1--3pm AYE \\
+                          & 3--5pm  AYF & 5--7pm  AYG & 7--9pm AYH \\ \hline
+                Friday    & 9--11am AYI & 11--1pm AYJ & 1--3pm AYK \\
+                          & 3--5pm  AYL & 5--7pm  AYM &  \\ \hline\hline
+                \multicolumn3l{\bfseries Laptop Sections:} \\ \hline
+                Thursday  & 1--3pm  AYN & 3--5pm  AYO & 5--7pm AYP \\ \hline
+                Friday    & 9--11am AYQ & 11--1pm AYR & 1--3pm AYS
+            \end{tabular} \\
+        }
+    \end{tabular}
+\end{table}
+
+\vfil
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|c|} \hline
+        Grade & \hspace{.75in} & Out of 60 \\ \hline
+        Grader & \multicolumn{2}{c|}{} \\ \hline
+    \end{tabular}
+\end{table}
+
+\newpage
+\begin{problems}
+%----------------------------------------------------------------------
+\item (3 points)
+    Using 140 characters or less, post a synopsis of your favorite movie to the
+    course piazza space under the ``HW0 tell me something!'' notice, so that
+    your post is visible to everyone in the class, and tagged by \#HW0num1.
+    Also, use Piazza's code-formatting tools to write a {\em private} post to
+    course staff that includes at least 5 lines of code. It can be code of your
+    own or from a favorite project---it doesn't even have to be syntactically
+    correct---but it must be formatted as a code block in your post, and also
+    include the tag \#HW0num1. (Hint: Check
+    \url{http://support.piazza.com/customer/portal/articles/1774756-code-blocking}).
+    Finally, please write the 2 post numbers corresponding to your posts here:
+
+    \begin{table}[h]
+        \begin{center}
+            \begin{tabular}{|l|c|}
+                \hline
+                Favorite Movie Post (Public) number: & \hspace{2in} \\ \hline
+                Formatted Code Post (Private) number: & \hspace{2in} \\ \hline
+            \end{tabular}
+        \end{center}
+    \end{table}
+
+\item (12 points)
+    Simplify the following expressions as much as possible, \textbf{without
+    using an calculator (either hardware or software)}. Do not approximate.
+    Express all rational numbers as improper fractions. Show your work in the
+    space provided, and write your answer in the box provided.
+
+    \begin{enumerate}
+        \item $\displaystyle\prod_{k=2}^n \left(1-\frac{1}{k^2}\right)$
+                \hfill
+                \begin{tabular}{|l|c|}
+                    \hline
+                    Answer for (\theenumii): & \hspace{2in} \\ \hline
+                \end{tabular}
+                \vfill
+
+        \item $\displaystyle3^{1000} \bmod 7$
+                \hfill
+                \begin{tabular}{|l|c|}
+                    \hline
+                    Answer for (\theenumii): & \hspace{2in} \\ \hline
+                \end{tabular}
+                \vfill
+\newpage
+
+        \item $\displaystyle\sum_{r=1}^\infty(\frac{1}{2})^r$
+                \hfill
+                \begin{tabular}{|l|c|}
+                    \hline
+                    Answer for (\theenumii): & \hspace{2in} \\ \hline
+                \end{tabular}
+                \vfill
+
+        \item $\displaystyle\frac{\log_7 81}{\log_7 9}$
+                \hfill
+                \begin{tabular}{|l|c|}
+                    \hline
+                    Answer for (\theenumii): & \hspace{2in} \\ \hline
+                \end{tabular}
+                \vfill
+
+        \item $\displaystyle\log_2 4^{2n}$
+                \hfill
+                \begin{tabular}{|l|c|}
+                    \hline
+                    Answer for (\theenumii): & \hspace{2in} \\ \hline
+                \end{tabular}
+                \vfill
+
+        \item $\displaystyle\log_{17} 221 - \log_{17} 13$
+                \hfill
+                \begin{tabular}{|l|c|}
+                    \hline
+                    Answer for (\theenumii): & \hspace{2in} \\ \hline
+                \end{tabular}
+                \vfill
+    \end{enumerate}
+
+\newpage
+%----------------------------------------------------------------------
+\item (8 points)
+    Find the formula for $1+$ $\displaystyle\sum_{j=1}^n j!j $, and show work
+    proving the formula is correct using induction.
+
+    \hfill
+    \begin{tabular}{|l|c|}
+        \hline
+        Formula: & \hspace{2in} \\ \hline
+    \end{tabular}
+    \vfill\vfill
+
+%----------------------------------------------------------------------
+\item (8 points)
+    Indicate for each of the following pairs of expressions $(f(n), g(n))$,
+    whether $f(n)$ is $O$, $\Omega$, or $\Theta$ of $g(n)$.  Prove your answers
+    to the first two items, but just GIVE an answer to the last two.
+
+    \begin{enumerate}
+        \item $\displaystyle f(n) = 4^{\log_{4} n}$ and $g(n) = 2n+1$.
+                \hfill
+                \begin{tabular}{|l|c|}
+                    \hline
+                    Answer for (\theenumii): & $\quad f(n) \quad\qquad g(n)\quad$ \\ \hline
+                \end{tabular}
+                \vfill
+
+        \item $\displaystyle f(n) = n^2$ and $g(n) = (\sqrt{2})^{\log_2 n}$.
+                \hfill
+                \begin{tabular}{|l|c|}
+                    \hline
+                    Answer for (\theenumii): & $\quad f(n) \quad\qquad g(n)\quad$ \\ \hline
+                \end{tabular}
+                \vfill
+
+\newpage
+
+        \item $f(n) = \log_2(n!)$ and $g(n) = n \log_2 n$.
+
+                \hfill
+                \begin{tabular}{|l|c|}
+                    \hline
+                    Answer for (\theenumii): & $\quad f(n) \quad\qquad g(n)\quad$ \\ \hline
+                \end{tabular}
+                \vfill
+
+        \item $f(n) = n^k$ and $g(n) = c^n$ where $k$ and $c$ are constants and $c > 1$.
+
+                \hfill
+                \begin{tabular}{|l|c|}
+                    \hline
+                    Answer for (\theenumii): & $\quad f(n) \quad\qquad g(n)\quad$ \\ \hline
+                \end{tabular}
+                \vfill
+
+    \end{enumerate}
+
+%----------------------------------------------------------------------
+\item (9 points)
+    Solve the following recurrence relations for integer $n$. If no solution
+    exists, please explain the result.
+
+    \begin{enumerate}
+        \item $T(n) = T(\frac{n}{2}) + 5$, $T(1) = 1$; assume $n$ is a power of 2.
+
+                \hfill
+                \begin{tabular}{|l|c|}
+                    \hline
+                    Answer for (\theenumii): & \hspace{2in} \\ \hline
+                \end{tabular}
+                \vfill
+
+
+        \item $T(n) = T(n-1) + \frac{1}{n}$, $T(0) = 0$.
+                \hfill
+                \begin{tabular}{|l|c|}
+                    \hline
+                    Answer for (\theenumii): & \hspace{2in} \\ \hline
+                \end{tabular}
+                \vfill
+
+        \item Prove that your answer to part (a) is correct using induction.
+            \vfill\vfill
+
+\end{enumerate}
+
+\newpage
+%----------------------------------------------------------------------
+\item (10 points)
+    Suppose function call parameter passing costs constant time, independent of
+    the size of the structure being passed.
+
+    \begin{enumerate}
+        \item Give a recurrence for worst case running time of the recursive
+            Binary Search function in terms of $n$, the size of the search
+            array. Assume $n$ is a power of 2. Solve the recurrence.
+
+            \vfill\vfill
+
+            \hfill
+            \begin{tabular}{|l|c|}
+                \hline
+                Recurrence: & \hspace{2in} \\ \hline
+                Base case: & \\ \hline
+                Recurrence Solution: &  \\ \hline
+            \end{tabular}
+            \vfill
+
+        \item Give a recurrence for worst case running time of the recursive
+            Merge Sort function in terms of $n$, the size of the array being
+            sorted. Solve the recurrence.
+
+            \vfill\vfill
+
+            \hfill
+            \begin{tabular}{|l|c|}
+                \hline
+                Recurrence: & \hspace{2in} \\ \hline
+                Base case: & \\ \hline
+                Running Time: &  \\ \hline
+            \end{tabular}
+            \vfill
+
+    \end{enumerate}
+
+
+\newpage
+\item (10 points)
+    Consider the pseudocode function below.
+\begin{verbatim}
+derp(x, n)
+     if (n == 0)
+         return 1;
+     if (n % 2 == 0)
+         return derp(x^2, n/2);
+     return x * derp(x^2, (n-1)/2);
+\end{verbatim}
+
+    \begin{enumerate}
+        \item What is the output when passed the following parameters: $x=2$,
+            $n=12$? Show your work (activation diagram or similar).
+
+            \hfill
+            \begin{tabular}{|l|c|}
+                \hline
+                Answer for (\theenumii): & \hspace{2in} \\ \hline
+            \end{tabular}
+            \vfill
+
+        \item Briefly describe what this function is doing.
+
+            \vfill
+
+        \item Write a recurrence that models the running time of this function.
+            Assume checks, returns, and arithmetic are constant time, but be
+            sure to evaluate all function calls. \emph{Hint: what is the
+            \emph{most} $n$ could be at each level of the recurrence?}
+
+            \vfill
+
+        \item Solve the above recurrence for the running time of this function.
+
+            \vfill
+
+    \end{enumerate}
+
+\end{problems}
+
+\newpage
+%----------------------------------------------------------------------
+Blank sheet for extra work.
+
+
+\end{document}

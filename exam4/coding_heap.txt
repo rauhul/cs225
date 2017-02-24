@@ -1,0 +1,47 @@
+#########################################
+##                                     ##
+##     Grading question exam4-heap     ##
+##                                     ##
+#########################################
+:: Compiling...
+g++ -std=c++0x -c -g -O0 -Wall -Wextra -Wno-unused-function -o heap.o heap_wrapper.cpp
+:: Compiled successfully!
+:: Compiling provided code...
+
+:: Compiling test_empty.
+:: Running test_empty.
+Finding the right arm of: [ ]
+Result:   [ ]
+Expected: [ ]
+:: Passed test_empty.
+
+:: Compiling test_single.
+:: Running test_single.
+Finding the right arm of: [-20]
+Result:   [-20]
+Expected: [-20]
+:: Passed test_single.
+
+:: Compiling test_case1.
+:: Running test_case1.
+Finding the right arm of: [5, 8, 9, 12, 15, 17, 20]
+Result:   [5, 9, 20]
+Expected: [5, 9, 20]
+:: Passed test_case1.
+
+:: Compiling test_case2.
+:: Running test_case2.
+Finding the right arm of: [-10, -9, -8]
+Result:   [-10, -8]
+Expected: [-10, -8]
+:: Passed test_case2.
+
+:: Compiling test_not_complete.
+:: Running test_not_complete.
+Finding the right arm of: [5, 8, 9, 202, 210]
+Result:   [5, 9]
+Expected: [5, 9]
+:: Passed test_not_complete.
+
+Grade for question exam4-heap: 100/100
+

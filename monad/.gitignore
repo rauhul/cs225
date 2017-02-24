@@ -1,0 +1,7 @@
+*_grade
+*.o
+*.cgo
+*.cga
+.monadid
+source/cc-monad
+source/pure-monad

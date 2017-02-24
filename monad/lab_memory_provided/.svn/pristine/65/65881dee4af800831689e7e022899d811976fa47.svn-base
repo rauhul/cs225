@@ -1,0 +1,18 @@
+[Required Files]
+allocator.cpp
+allocator.h
+letter.cpp
+letter.h
+room.cpp
+room.h
+
+[Testing Files]
+Makefile
+unit_tests.cpp
+
+students.txt
+rooms.txt
+
+fileio.cpp
+fileio.h
+

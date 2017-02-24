@@ -1,0 +1,24 @@
+Grading r43467 by rvarma2 committed on Tue Apr 26 23:52:05 CDT 2016
+Monad Autograder
+Testing mp7.1 at 2016-04-27 00:22:59
+
+"If you're not failing every now and again, it's a sign you're not doing anything very innovative." ~ Woody Allen
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+addElements1 . . . . [20 pts] - passed
+addElements2 . . . . [20 pts] - passed
+testFindAndSetUnion1 [20 pts] - passed
+testFindAndSetUnion2 [20 pts] - passed
+testFindAndSetUnion3 [20 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+

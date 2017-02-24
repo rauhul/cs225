@@ -1,0 +1,4 @@
+@INCLUDE        = ../doxygen/doxygen.conf
+PROJECT_NAME    = "lab_gdb"
+PROJECT_BRIEF   = "Gruesome GDB"
+EXTRACT_PRIVATE = YES

@@ -1,0 +1,173 @@
+Exam 4 Multiple Choice Questions
+
+- These questions may not be in the same order as what you saw on the exam.
+- Your answer is indicated by a '->'
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+For a minHeap implementation, assume we use the 0th index of the array
+to store the root (instead of index 1). Given an element at position
+$i$, what would be the position of its parent (assume $i \\neq 0$)?
+
+Choices:
+   a. None of other options
+   b. $\frac{i-1}{2}$
+   c. $\left\lceil \frac{i-1}{2} \right\rceil$
+   d. $\left\lfloor \frac{i}{2} \right\rfloor$
+-> e. $\left\lfloor \frac{i-1}{2} \right\rfloor$
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Consider the following disjoint sets.
+
+    \tikz [tree layout, minimum number of children=2, sibling distance=15mm, level distance=11mm,font=\Large,>=latex]
+    \graph {
+        1 <- {
+            0,
+            2 <- {
+                3,
+                4
+            }
+        },
+        7 <- {
+            6 <- {
+                5,
+                8
+            }
+        }
+    };
+
+Using our array implementation of disjoint sets with union-by-size and
+path compression, after the operations `Find(3)`,
+`Union(Find(4), Find(8))` and `Find(5)`, the resulting array is named
+`result`. Which of the following statements is correct? (Hint: in the
+array implementation of disjoint sets, keys are implicitly stored in
+array indices)
+
+Choices:
+   a. `result[4]` is 1 and `result[6]` is 7
+   b. None of these are correct
+   c. `result[3]` is 2 and `result[7]` is 1
+   d. `result[2]` is 1 and `result[4]` is 2
+-> e. `result[4]` is 1 and `result[6]` is 1
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+What is the minimum number of keys that can be stored in a B-Tree of
+height 30?
+
+Choices:
+   a. None of the other options are correct.
+-> b. The answer cannot be determined by the given information.
+   c. $2^{29} − 1$
+   d. $2^{31} − 1$
+   e. $2^{30} − 1$
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Given the following string of characters:
+
+    a b c d a b c d a b c d a b c d
+
+which character will possibly have the huffman code `11`?
+
+Choices:
+   a. `d`
+   b. `c`
+   c. `b`
+-> d. Any of the other answers
+   e. `a`
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Find on a dictionary can return multiple values for a single key.
+
+Choices:
+-> a. False
+   b. True
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+The CS department wants to maintain a database of up to 1800 UINs of
+students who have taken CS 225 so that it can be determined very quickly
+whether or not a given student has taken the course. Speed of response
+is very important; efficient use of memory is also important, but not as
+important as speed of response. Which of the following data structures
+would be most appropriate for this task?
+
+Choices:
+   a. A hash table using probing with capacity 1800
+   b. A sorted linked list
+-> c. A hash table using probing with capacity 4500
+   d. A hash table using probing with capacity 100000
+   e. A sorted array with 1800 entries
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+What is the running time to insert $n$ nodes into an AVL Tree?
+
+Choices:
+   a. None of the other answers
+   b. $O(n^2)$
+   c. $O(n)$
+   d. $O(\log n)$
+-> e. $O(n\log n)$
+   f. $O(1)$
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+In our uptree disjoint sets implementation, suppose we employ
+union-by-size and no path compression. The running times of the relevant
+functions are:
+
+Choices:
+   a. $O(n)$ for `setUnion` and $O(1)$ for `Find`
+   b. $O(\log n)$ for `setUnion` and $O(\log n)$ for `Find`
+   c. $O(n)$ for `setUnion` and $O(n\log n)$ for `Find`
+-> d. $O(1)$ for `setUnion` and $O(\log n)$ for `Find`
+   e. None of the other answers
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+The Priority Queue (PQ) ADT implements the functions `removeMin` and
+`insert`. Suppose you use a sorted, singly linked list with a tail
+pointer and with keys arranged largest to smallest to implement a PQ.
+Which of these is the tightest bound on the running times for
+`removeMin` and `insert` for this implementation on a PQ containing $n$
+keys?
+
+Choices:
+   a. $O(n)$ for `removeMin` and $O(n)$ for `insert`
+-> b. None of the other options
+   c. $O(1)$ for `removeMin` and $(\log n)$ for `insert`
+   d. $O(n)$ for `removeMin` and $O(\log n)$ for `insert`
+   e. $O(1)$ for `removeMin` and $O(n)$ for `insert`
+Your answer was incorrect.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Suppose you are given a list of size $n$ and another list of size $m$,
+where $m &lt; n$. You want to determine if all elements that are in the
+size $m$ list are present in the list of size $n$. What is the best time
+complexity of **CREATING** a hashtable such that you will be able to
+solve the problem even with duplicate elements.
+
+Choices:
+   a. $O(m \log n)$
+   b. $O(mn)$
+   c. $O(n)$
+   d. None of the other options
+   e. $O(n + m)$
+-> f. $O(m)$
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+

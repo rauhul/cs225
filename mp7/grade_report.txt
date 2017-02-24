@@ -1,0 +1,39 @@
+Grading r46037 by rvarma2 committed on Mon May  2 17:57:20 CDT 2016
+Monad Autograder
+Testing mp7 at 2016-05-03 00:50:35
+
+"Work's best done when the deadline is closer." ~ Chaitanya Datye
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+addElements1  . . . . . . [5 pts] - passed
+addElements2  . . . . . . [5 pts] - passed
+testFindAndSetUnion1  . . [5 pts] - passed
+testFindAndSetUnion2  . . [5 pts] - passed
+testFindAndSetUnion3  . . [5 pts] - passed
+testMakeSmallMaze . . . . [5 pts] - passed
+testMakeMazeConnected . . [5 pts] - passed
+testMakeMazeAcyclic . . . [5 pts] - passed
+testMakeMazeTree1000  . . [5 pts] - passed
+testMakeMazeRandom  . . . [5 pts] - passed
+testSolveMazeValidPath  . [5 pts] - passed
+testSolutionBottomRow . . [5 pts] - passed
+testSolutionCorrectSquare [5 pts] - passed
+testSolveMazeSmall  . . . [5 pts] - passed
+testSolveMazeLarge  . . . [5 pts] - FAILED
+testDrawMazeSmall . . . . [5 pts] - passed
+testDrawMazeMed . . . . . [5 pts] - passed
+testDrawMazeLarge . . . . [5 pts] - passed
+testDrawSolutionMed . . . [5 pts] - passed
+testDrawSolutionLarge . . [5 pts] - FAILED
+
+
+Total score...
+================================================================
+TOTAL SCORE: 90
+

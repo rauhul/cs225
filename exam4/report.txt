@@ -1,0 +1,16 @@
+Exam 4 grade report
+===================
+
+Multiple Choice:     27/30    (see multiple_choice.txt)
+Heap Coding:         20/20    (see coding_heap.txt)
+Dict Coding:          8/8     (see coding_dict.txt)
+                 -----------
+Total:               94/100
+
+Notes:
+- The Total does *not* include your dict coding score.
+- See multiple_choice.txt for details on your multiple choice problems.
+- See coding_heap.txt and coding_dict.txt for details on your coding problems.
+- heap.cpp and dict.cpp contain your coding submissions.
+- README_heap.md and README_dict.md contain your coding problem descriptions.
+- If you didn't submit one of the coding problems, some of the above files won't exist.

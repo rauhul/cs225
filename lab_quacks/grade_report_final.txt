@@ -1,0 +1,33 @@
+Grading r18943 by rvarma2 committed on Thu Feb 25 15:07:06 CST 2016
+Monad Autograder
+Testing lab_quacks at 2016-02-29 00:18:47
+
+"Be careful about using the following code -- I've only proven that it works, I haven't tested it." ~ Donald Knuth
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+sumDigits_762  . . . [3 pts]  - passed
+sumDigits_0  . . . . [2 pts]  - passed
+sumDigits_2  . . . . [2 pts]  - passed
+sumDigits_1024 . . . [3 pts]  - passed
+triangle_0 . . . . . [2 pts]  - passed
+triangle_1 . . . . . [2 pts]  - passed
+triangle_5 . . . . . [3 pts]  - passed
+triangle_10  . . . . [3 pts]  - passed
+sum_136  . . . . . . [20 pts] - passed
+sum_floats . . . . . [20 pts] - passed
+scramble_17  . . . . [20 pts] - passed
+scramble_10  . . . . [20 pts] - passed
+verifySame_result  . [10 pts] - passed
+verifySame_no_modify [15 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 125
+

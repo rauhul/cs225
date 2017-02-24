@@ -1,0 +1,26 @@
+Grading r7114 by rvarma2 committed on Mon Feb  1 20:45:22 CST 2016
+Monad Autograder
+Testing mp2.1 at 2016-02-03 00:36:17
+
+"I'm not saying he's evil incarnate based on that fact alone; I've always known it." ~ REDACTED
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+InvertColorsEven  . . [30 pts] - passed
+FlipLeftEven  . . . . [15 pts] - passed
+FlipLeftOdd . . . . . [15 pts] - passed
+AdjustBrightnessEven  [10 pts] - passed
+AdjustBrightnessEven2 [10 pts] - passed
+AdjustBrightnessEven3 [10 pts] - passed
+ImageMakefile . . . . [10 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+

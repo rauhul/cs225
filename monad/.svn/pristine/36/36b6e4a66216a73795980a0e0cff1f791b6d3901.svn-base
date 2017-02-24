@@ -1,0 +1,20 @@
+ - BMP::setSize does not seem to impact under large iterations (50)
+ - using for < log(resolution) gives accurate time, using getPixel gets in between
+ - larger than 20 iterations of getPixel appears to have no effect
+    - 1 iteration looks linear
+	- 5 iterations is in between
+	- 5 repeats of decompress in the testing code has a similar effect of
+	  putting it in between linear, but less so [note: setSize turned off]
+       - between 16-22, tops out at 18.5 with 40 iterations here
+ - too large and long screws things up with memory (new/delete slow down)
+ - getting rid of BMP creation/deletion doesn't improve things
+ - ** putting O(n) loop in getPixel makes the getPixel test hit nlogn :O **
+    - BUT changing getPixel test to be for N_TIME causes timeout??? - NVM it's
+	  working now; not sure what was wrong
+	- repeated calls to getPixel(0, 0) = NlogN
+	- *** calls over x = 0..res, y = 0..res = O(n) :O :O ***
+	   - this seems odd, but could be due to caching.
+	   - Note that the repeated calls to (0, 0) take 45-55us/call
+	   - calls over (x, y) take 190us
+	   - This would make sense if caching means the calls to get to previous
+		 node are effectively free

@@ -1,0 +1,24 @@
+Grading r8916 by rvarma2 committed on Fri Feb  5 14:56:04 CST 2016
+Monad Autograder
+Testing lab_memory at 2016-02-08 00:21:55
+
+"The trouble with programmers is that you can never tell what a programmer is doing until it's too late." ~ Seymour Cray
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+test_constructor (asan) [5 pts]  - passed
+test_allocate (asan)  . [5 pts]  - passed
+test_printrooms (asan)  [20 pts] - passed
+test_any_output . . . . [30 pts] - passed
+test_correct_output . . [40 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+

@@ -1,0 +1,30 @@
+Grading r11447 by rvarma2 committed on Tue Feb  9 19:20:46 CST 2016
+Monad Autograder
+Testing mp2 at 2016-02-10 00:23:40
+
+"The most likely way for the world to be destroyed, most experts agree, is by accident. That's where we come in; we're computer professionals. We cause accidents." ~ Nathaniel Borenstein
+
+Setting up test environment...
+Compiling...
+================================================================
+scene.cpp:92:17: error: use of undeclared identifier 'newIndex'; did you mean 'newindex'?
+                deletepicture(newIndex);
+                              ^~~~~~~~
+                              newindex
+scene.cpp:88:40: note: 'newindex' declared here
+void Scene::changelayer(int index, int newindex) {
+                                       ^
+1 error generated.
+make: *** [scene.o] Error 1
+make: *** Waiting for unfinished jobs....
+
+
+Running tests...
+================================================================
+Could not execute test cases
+
+
+Total score...
+================================================================
+TOTAL SCORE: 0
+

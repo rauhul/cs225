@@ -1,0 +1,23 @@
+Grading r24096 by rvarma2 committed on Thu Mar 10 17:39:11 CST 2016
+Monad Autograder
+Testing lab_trees at 2016-03-14 00:16:40
+
+"If you just rely on one model, you tend to amputate reality to make it fit your model." ~ David Brooks
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+test_isOrdered  . [33 pts] - passed
+test_mirror . . . [33 pts] - passed
+test_printPaths . [34 pts] - passed
+test_sumDistances [25 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 125
+

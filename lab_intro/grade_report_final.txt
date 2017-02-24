@@ -1,0 +1,8 @@
+Grading r680 by ivanov3 on 2016-01-20T05:19:00.385295Z
+Monad Autograder
+Testing lab_intro at 2016-01-25 01:58:16
+
+"There's not enough wiggleability, you know." ~ Eric Shaffer
+
+Setting up test environment...
+Error: /dev/shm/cs225student_test/autograder/temp/lab_intro/rgbapixel.cpp does not exist.

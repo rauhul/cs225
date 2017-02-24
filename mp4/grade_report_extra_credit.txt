@@ -1,0 +1,48 @@
+Grading r19770 by ivanov3 committed on Fri Feb 26 12:40:02 CST 2016
+Monad Autograder
+Testing mp4.1 at 2016-03-05 00:49:54
+
+"At least for a while, in your heart of hearts you'll be confident only that the university will soon enough discover its error in awarding you the PhD, and at some point will brand you (in public no doubt) the fraud you know you are. This too will pass as you come to realize that students are extremely gullible and many of your colleagues are even greater frauds than you." ~ Berkeley PhD Advice
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+testStackPushPeek  . . . . . . . [4 pts] - FAILED
+testStackPushPop . . . . . . . . [4 pts] - FAILED
+testStackManyPushesPeek  . . . . [4 pts] - FAILED
+testStackManyPushesTwoPops . . . [3 pts] - FAILED
+testStackManyOperations  . . . . [3 pts] - FAILED
+testStackDuplicateElements . . . [2 pts] - FAILED
+testQueueEnqueuePeek . . . . . . [2 pts] - FAILED
+testQueueEnqueueDequeue  . . . . [4 pts] - FAILED
+testQueueManyEnqueuesPeek  . . . [4 pts] - FAILED
+testQueueManyEnqueuesTwoDequeues [3 pts] - FAILED
+testQueueManyOperations  . . . . [3 pts] - FAILED
+stack_peek_1 . . . . . . . . . . [2 pts] - FAILED
+stack_pop_peek_1 . . . . . . . . [2 pts] - FAILED
+stack_pop_2  . . . . . . . . . . [4 pts] - FAILED
+stack_isEmpty_1  . . . . . . . . [4 pts] - FAILED
+stack_isEmpty_2  . . . . . . . . [4 pts] - FAILED
+stack_push_pop_isEmpty . . . . . [4 pts] - FAILED
+stack_push_and_pop . . . . . . . [4 pts] - FAILED
+queue_peek_1 . . . . . . . . . . [2 pts] - FAILED
+queue_dequeue_peek_1 . . . . . . [4 pts] - FAILED
+queue_dequeue_2  . . . . . . . . [4 pts] - FAILED
+queue_isEmpty_1  . . . . . . . . [4 pts] - FAILED
+queue_isEmpty_2  . . . . . . . . [4 pts] - FAILED
+queue_enqueue_dequeue_isEmpty  . [4 pts] - FAILED
+queue_enqueue_and_dequeue  . . . [4 pts] - FAILED
+testThroughStackQueue  . . . . . [4 pts] - FAILED
+testEnqueueConstantTime  . . . . [3 pts] - FAILED
+testDequeueConstantTime  . . . . [3 pts] - FAILED
+testEnqueuePeekDequeueTime . . . [4 pts] - FAILED
+
+
+Total score...
+================================================================
+TOTAL SCORE: 0
+

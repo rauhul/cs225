@@ -1,0 +1,298 @@
+################################
+##                            ##
+##     Grading question 9     ##
+##                            ##
+################################
+> :: Compiling...
+> g++ -std=c++0x -c -g -O0 -Wall -Wextra -Wno-unused-function   -c -o binarytree_q9.o binarytree_q9.cpp
+> :: Compiled successfully!
+> :: Trying to compile binarytree_q10.cpp...
+> g++ -std=c++0x -c -g -O0 -Wall -Wextra -Wno-unused-function   -c -o binarytree_q10.o binarytree_q10.cpp
+> :: Compiling provided code...
+> 
+> :: Compiling test_empty.
+> :: Running test_empty.
+> Checking if this tree is full:
+> (empty)
+> Result:   true
+> Expected: true
+> :: Passed test_empty.
+> 
+> :: Compiling test_single.
+> :: Running test_single.
+> Checking if this tree is full:
+>  5
+> Result:   true
+> Expected: true
+> :: Passed test_single.
+> 
+> :: Compiling test_small_full.
+> :: Running test_small_full.
+> Checking if this tree is full:
+>    4
+>   / \
+>  3   5
+> Result:   true
+> Expected: true
+> :: Passed test_small_full.
+> 
+> :: Compiling test_big_full.
+> :: Running test_big_full.
+> Checking if this tree is full:
+>                                                                                   ______________________________ 14 _____________________________
+>                                                    ______________________________/                                                               \______________________________
+>                                   ______________ 21 _____________                                                                                                 ______________ 48 _____________
+>                    ______________/                               \______________                                                                   ______________/                               \______________
+>           ______ 17 _____                                                 ______ 45 _____                                                 ______ 6 ______                                                 ______ 30 _____
+>    ______/               \______                                   ______/               \______                                   ______/               \______                                   ______/               \______
+>  48                           __ 20 _                            48                           __ 10 _                            46                              10                           __ 23 _                         __ 26 _
+>                            __/       \__                                                   __/       \__                                                                                   __/       \__                   __/       \__
+>                          8               32                                              20              18                                                                              45              29              41              49
+>                        /   \                                                                           /   \                                                                           /   \
+>                      37      39                                                                      33      18                                                                      22      17
+>                                                                                                                                                                                     / \
+>                                                                                                                                                                                    8   24
+> Result:   true
+> Expected: true
+> :: Passed test_big_full.
+> 
+> :: Compiling test_small_nonfull.
+> :: Running test_small_nonfull.
+> Checking if this tree is full:
+>      4
+>    /   \
+>  2       5
+>   \
+>    3
+> Result:   false
+> Expected: false
+> :: Passed test_small_nonfull.
+> 
+> :: Compiling test_big_nonfull.
+> :: Running test_big_nonfull.
+> Checking if this tree is full:
+>                                           ______________ 32 _____________
+>                            ______________/                               \______________
+>                   ______ 29 _____                                                 ______ 44 _____
+>            ______/               \______                                   ______/               \______
+>       __ 28 _                         __ 22 _                         __ 9 __                         __ 30 _
+>    __/       \__                   __/       \__                   __/       \__                   __/       \__
+>  6               8               44              7               26              35              42              14
+>    \               \           /                   \           /   \               \           /   \           /
+>      47              16      43                      14      41      8               28      35      26      34
+>       \                       \                             /                                                 \
+>        7                       6                           23                                                  19
+> Result:   false
+> Expected: false
+> :: Passed test_big_nonfull.
+Grade for question 9: 100/100
+
+#################################
+##                             ##
+##     Grading question 10     ##
+##                             ##
+#################################
+> :: Compiling...
+> g++ -std=c++0x -c -g -O0 -Wall -Wextra -Wno-unused-function   -c -o binarytree_q10.o binarytree_q10.cpp
+> :: Compiled successfully!
+> :: Trying to compile binarytree_q9.cpp...
+> g++ -std=c++0x -c -g -O0 -Wall -Wextra -Wno-unused-function   -c -o binarytree_q9.o binarytree_q9.cpp
+> :: Compiling provided code...
+> 
+> :: Compiling test_empty.
+> :: Running test_empty.
+> Making neighbors in:
+> (empty)
+> Results neighbor traversal: (empty)
+> Expected neighbor traversal: (empty)
+> :: Passed test_empty.
+> 
+> :: Compiling test_single.
+> :: Running test_single.
+> Making neighbors in:
+>  1
+> Results neighbor traversal:
+>  - 1 -> NULL
+> Expected neighbor traversal:
+>  - 1 -> NULL
+> :: Passed test_single.
+> 
+> :: Compiling test_multi1.
+> :: Running test_multi1.
+> Making neighbors in:
+>    0
+>   /
+>  1
+> Results neighbor traversal:
+>  - 0 -> NULL
+>  - 1 -> NULL
+> Expected neighbor traversal:
+>  - 0 -> NULL
+>  - 1 -> NULL
+> :: Passed test_multi1.
+> 
+> :: Compiling test_multi2.
+> :: Running test_multi2.
+> Making neighbors in:
+>      0
+>    /
+>  1
+>   \
+>    2
+> Results neighbor traversal:
+>  - 0 -> NULL
+>  - 1 -> NULL
+>  - 2 -> NULL
+> Expected neighbor traversal:
+>  - 0 -> NULL
+>  - 1 -> NULL
+>  - 2 -> NULL
+> :: Passed test_multi2.
+> 
+> :: Compiling test_multi3.
+> :: Running test_multi3.
+> Making neighbors in:
+>      0
+>    /   \
+>  1       2
+>   \
+>    3
+> Results neighbor traversal:
+>  - 0 -> NULL
+>  - 1 -> 2 -> NULL
+>  - 3 -> NULL
+> Expected neighbor traversal:
+>  - 0 -> NULL
+>  - 1 -> 2 -> NULL
+>  - 3 -> NULL
+> :: Passed test_multi3.
+> 
+> :: Compiling test_multi4.
+> :: Running test_multi4.
+> Making neighbors in:
+>      0
+>    /   \
+>  1       2
+>   \     /
+>    3   4
+> Results neighbor traversal:
+>  - 0 -> NULL
+>  - 1 -> 2 -> NULL
+>  - 3 -> 4 -> NULL
+> Expected neighbor traversal:
+>  - 0 -> NULL
+>  - 1 -> 2 -> NULL
+>  - 3 -> 4 -> NULL
+> :: Passed test_multi4.
+> 
+> :: Compiling test_multi5.
+> :: Running test_multi5.
+> Making neighbors in:
+>        0
+>      /   \
+>    1       2
+>   / \     /
+>  3   4   5
+> Results neighbor traversal:
+>  - 0 -> NULL
+>  - 1 -> 2 -> NULL
+>  - 3 -> 4 -> 5 -> NULL
+> Expected neighbor traversal:
+>  - 0 -> NULL
+>  - 1 -> 2 -> NULL
+>  - 3 -> 4 -> 5 -> NULL
+> :: Passed test_multi5.
+> 
+> :: Compiling test_multi6.
+> :: Running test_multi6.
+> Making neighbors in:
+>        0
+>      /   \
+>    1       2
+>   / \     / \
+>  3   4   5   6
+> Results neighbor traversal:
+>  - 0 -> NULL
+>  - 1 -> 2 -> NULL
+>  - 3 -> 4 -> 5 -> 6 -> NULL
+> Expected neighbor traversal:
+>  - 0 -> NULL
+>  - 1 -> 2 -> NULL
+>  - 3 -> 4 -> 5 -> 6 -> NULL
+> :: Passed test_multi6.
+> 
+> :: Compiling test_multi7.
+> :: Running test_multi7.
+> Making neighbors in:
+>      0
+>    /   \
+>  1       2
+>         /
+>        3
+> Results neighbor traversal:
+>  - 0 -> NULL
+>  - 1 -> 2 -> NULL
+>  - 3 -> NULL
+> Expected neighbor traversal:
+>  - 0 -> NULL
+>  - 1 -> 2 -> NULL
+>  - 3 -> NULL
+> :: Passed test_multi7.
+> 
+> :: Compiling test_multi8.
+> :: Running test_multi8.
+> Making neighbors in:
+>      0
+>    /   \
+>  1       2
+>           \
+>            3
+> Results neighbor traversal:
+>  - 0 -> NULL
+>  - 1 -> 2 -> NULL
+>  - 3 -> NULL
+> Expected neighbor traversal:
+>  - 0 -> NULL
+>  - 1 -> 2 -> NULL
+>  - 3 -> NULL
+> :: Passed test_multi8.
+> 
+> :: Compiling test_multi9.
+> :: Running test_multi9.
+> Making neighbors in:
+>  0
+>    \
+>      1
+>       \
+>        2
+> Results neighbor traversal:
+>  - 0 -> NULL
+>  - 1 -> NULL
+>  - 2 -> NULL
+> Expected neighbor traversal:
+>  - 0 -> NULL
+>  - 1 -> NULL
+>  - 2 -> NULL
+> :: Passed test_multi9.
+> 
+> :: Compiling test_multi10.
+> :: Running test_multi10.
+> Making neighbors in:
+>        0
+>      /   \
+>    1       2
+>   /         \
+>  3           4
+> Results neighbor traversal:
+>  - 0 -> NULL
+>  - 1 -> 2 -> NULL
+>  - 3 -> NULL
+> Expected neighbor traversal:
+>  - 0 -> NULL
+>  - 1 -> 2 -> NULL
+>  - 3 -> 4 -> NULL
+> :: Failed test_multi10.
+Grade for question 10: 92.3/100
+
+
+Total score: 100*0.14 + 92.3*0.06 = 19.538/20

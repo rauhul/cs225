@@ -1,0 +1,16 @@
+Exam 3 grade report
+===================
+
+Multiple Choice:     27/30    (see multiple_choice.txt)
+First Coding:        14/14    (see coding.txt)
+Second Coding:     5.54/6     (see coding.txt)
+                 -----------
+Total:            93.08/100
+
+
+Notes:
+- See multiple_choice.txt for details on your multiple choice problems
+- See coding.txt for details on your coding problems
+- binarytree_q9.cpp, binarytree_q10.cpp, and binarytree.h contain your coding
+  submissions
+- README_coding.md contains your coding problem description.

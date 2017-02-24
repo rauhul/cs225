@@ -1,0 +1,256 @@
+Exam 2 Multiple Choice Questions
+
+- These questions may not be in the same order as what you saw on the exam.
+- Your answer is indicated by a '->'
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Consider the following class definitions:
+
+    class Restaurant{
+    public:
+        int rate() const;
+    private:
+        double rating;
+    };
+
+    class Chipotle: public Restaurant {
+    public:
+        int rateBad();
+    };
+
+Where could the assignment `rating = 3.0;` appear for the private
+variable `rating`?
+
+Choices:
+   a. `rate()` can make the assignment, but `rateBad()` cannot.
+   b. The answer to this question cannot be determined from the given code.
+   c. Both `rate()` and `rateBad()` can make the assignment.
+   d. `rateBad()` can make the assignment, but `rate()` cannot.
+-> e. Neither `rate()` nor `rateBad()` can make the assignment.
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+What will be the output of the following program?
+
+    class Base
+    {
+        public:
+            virtual ~Base() {cout << "Destructing Base "; }
+    };
+
+    class Derived:public Base
+    {
+        public:
+            virtual ~Derived() { cout<< "Destructing Derived "; }
+    }; 
+
+    int main()
+    {
+        Base* b = new Derived;     
+        delete b;
+    }
+
+Choices:
+   a. `"Destructing Derived "`
+   b. `"Destructing Base Destructing Derived "`
+   c. `"Destructing Base "`
+   d. None of the above
+-> e. `"Destructing Derived Destructing Base "`
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Assume that you have a templatized `Latte` class, and another `coffee`
+class. Which of the following correctly declares a variable called
+`beverages` which is a dynamic array of `Lattes` whose parameterized
+type is a `coffee` pointer?
+
+Choices:
+   a. None of the other options is correct.
+-> b. ```
+      Latte<coffee *> * beverages;
+      ```
+   c. ```
+      Latte * beverages = new coffee[size]
+      ```
+   d. ```
+      Latte<coffee> * beverages;
+      ```
+   e. More than one of the other options are correct.
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+In implementing Stack ADT, using which of the following data structure
+gives best asymptotic runtime for `push` and `pop`? (Assume best
+possible implementation for stack using provided data structure)
+
+Choices:
+   a. Singly linked list with head and tail pointer.
+   b. All options provide the same runtime.
+   c. Singly linked list with head pointer only.
+-> d. Array (size of array larger than possible elements in stack).
+Your answer was incorrect.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Suppose a `std::stack<int> s` contains 6 elements `1, 2, 3, 4, 5, 6`
+(pushed in that order). What is the result of executing the following
+code snippet, assuming all required libraries are included?
+
+    for(int i = 0; i<6; i++){
+        if(i%2==0) {
+            s.push(s.top());
+            s.pop();
+        }
+    }
+
+Choices:
+   a. The top half of `s` contains even elements and the bottom half of `s`
+      contains odd elements
+   b. The elements of `s` are reversed.
+   c. The even numbers in `s` are reversed.
+   d. The odd numbers in `s` are reversed.
+-> e. `s` remains the same.
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Consider this simple example.
+
+    int * a;
+    int * b;
+    a = new int(5);
+    b = a;
+    cout << *b << endl;
+    delete a; 
+    a = NULL; 
+    b = NULL;
+
+What is the result of executing these statements if you assume the
+standard `iostream` library has been included?
+
+Choices:
+   a. This code has a memory leak.
+   b. None of the other options describes the behavior of this code.
+-> c. `5` is sent to standard out.
+   d. This code results in undefined runtime behavior.
+   e. The memory address of `b` is sent to standard out.
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Consider this simple example
+
+    #include <iostream>
+    using namespace std;
+
+    class winterfell {
+    public:
+       winterfell(const string & s ): text(s) {};
+       char & operator()(int position) { return text[position];}
+    private:
+        string text;
+    };
+
+    int main() {
+       winterfell t("Winter Is Coming!");
+       for(int i = 0; i < 17; i++)
+            // your code here!
+       return 0;
+    }
+
+Which of the following statements complete the code so that the output
+is `"Winter Is Coming!"`?
+
+Choices:
+   a. `cout << t;`
+-> b. `cout << t(i);`
+   c. More than one of the other options is correct.
+   d. `cout << t[i];`
+   e. `cout << text[i];`
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Suppose we have implemented the Stack ADT as a singly-linked-list with
+`head` and `tail` pointers and no sentinels. Which of the following best
+describe the running times for the functions `push` and `pop`, assuming
+there are $O(n)$ items in the list, and that the top of the Stack is at
+the head of the list?
+
+Choices:
+   a. $O(1)$ for `push` and $O(n)$ for `pop`.
+   b. $O(n)$ for `push` and $O(1)$ for `pop`.
+-> c. $O(1)$ for both.
+   d. $O(n)$ for both.
+   e. None of the options is correct
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+We have implemented the Stack ADT as an array. Every time the array is
+full, you resize the array creating a new array that can hold four times
+as many elements as the previous array and copy values over from the old
+array. What is the total running time for $n$ pushes to the stack.
+
+Choices:
+-> a. $O(n \log n)$.
+   b. $O(\log n)$.
+   c. $O(1)$.
+   d. $O(n^2)$.
+   e. $O(n)$.
+Your answer was incorrect.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Consider a class `List` that implements an unordered list. Suppose it
+has as its representation a singly linked list with a `head` and `tail`
+pointer (i.e. pointers to the first and last nodes in the list).
+
+Given that representation, which of the following operations could be
+implemented in $O(1)$ time?
+
+I. Insert item at the front of the list  
+II. Insert item at the rear of the list  
+III. Delete front item from list  
+IV. Delete rear item from list
+
+Choices:
+   a. I and III
+-> b. I, II and III
+   c. I, II and IV
+   d. All of them
+   e. I and II
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+In the worst case, the number of comparisons needed to search a singly
+linked list of length $n$ for a given element is:
+
+Choices:
+   a. $O(1)$
+   b. $O(n \log n)$
+-> c. $O(n)$
+   d. $O(\log n)$
+   e. $O(\log\log n)$
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+In a sorted singly linked list of size $n$, implemented in the best
+possible way, time taken to find the largest element is
+
+Choices:
+   a. $O(\log n)$.
+-> b. $O(1)$.
+   c. $O(n \log n)$.
+   d. $O(n^2)$.
+   e. $O(n)$.
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
